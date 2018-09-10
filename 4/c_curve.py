@@ -21,4 +21,12 @@ def levcurve(x, y, l, alpha, n):
 
 
 levcurve(320, 100, 100, 90, 12)
-pygame.display.flip()
+
+on = True
+while on:
+     pygame.display.flip()
+     for event in pygame.event.get():
+       if event.type == pygame.QUIT:
+           on = False
+
+pygame.quit()
